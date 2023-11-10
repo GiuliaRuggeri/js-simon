@@ -6,11 +6,14 @@ function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-//Inserisce i numeri random nell'array
+//Inserisce i numeri random nell'array (sistemare)
 function numList() {
     for (i = 0; i < 5; i++) {
         let number = getRndInteger(1, 100);
-        randomNum.push(number);
+        if(!randomNum.includes(number)){
+          randomNum.push(number);  
+        }
+        
         console.log("numerorandom", number);
 
     }
